@@ -71,24 +71,83 @@ transformers
 
 ### For Yoga:
 
-1. Create graph embedding (input file: weakly_all_des_gt_mergetweets_yoga_13k.csv) which will create data_yoga_des_net.pickle file:
+1. Create graph embedding (Input files: weakly_all_des_gt_mergetweets_yoga_13k.csv, mention_yoga.pickle,  Output files: data_yoga_des_net.pickle, processed_yoga_data_des_net.pickle, yoga_graph_des_@mention.adjlist, yoga_graph_des_@mention.mapping) :
 
 ```
 create_graph_des_@mention_weak_yoga_13k.ipynb 
 
 ```
 
+2. For Embedding learning (Input files: data_yoga_des_net.pickle, Output files: b_model_des_net_yoga.m, predicted_utypes_des_net_yoga.pickle, user_des_net_yoga.embeddings): 
 
 
-2. For Embedding learning: 
+```
 
-yoga_graph_des_embd.ipynb 
+yoga_graph_des_@mention_embd.ipynb
 
-3. For M step:
 
-EM_create_graph_des_weak_yoga_13k.ipynb
+```
 
-EM_yoga_graph_des_embd.ipynb
+3. For M step, run iteratively following codes: 
+
+
+For first iteration, run following code
+
+```
+
+EM_yoga_graph_des_@mention_embd.ipynb
+
+```
+
+With Input files: processed_yoga_data_des_net.pickle, user_des_net_yoga.embeddings, weakly_all_des_gt_mergetweets_yoga_13k.csv, Output files: weakly_all_des_gt_mergetweets_yoga_13k_em1_des_net.csv
+
+
+Then run following code:
+
+```
+
+EM_create_graph_des_@mention_weak_yoga_13k.ipynb
+
+```
+
+With Input files: weakly_all_des_gt_mergetweets_yoga_13k_em1_des_net.csv, mention_yoga.pickle,  Output files: data_yoga_des_net_em1.pickle, yoga_graph_des_@mention_em1.adjlist, yoga_graph_des_@mention_em1.mapping) :
+
+
+
+For second iteration, run following code
+
+```
+
+EM_yoga_graph_des_@mention_embd.ipynb
+
+```
+
+With Input files: data_yoga_des_net_em1.pickle, processed_yoga_data_des_net.pickle, user_des_net_yoga_em1.embeddings, weakly_all_des_gt_mergetweets_yoga_13k_em1_des_net.csv, Output files: b_model_des_net_yoga_em1.m, predicted_utypes_des_net_yoga_em1.pickle, user_des_net_yoga_em1.embeddings, weakly_all_des_gt_mergetweets_yoga_13k_em2_des_net.csv
+
+
+Then run following code:
+
+```
+
+EM_create_graph_des_@mention_weak_yoga_13k.ipynb
+
+```
+
+With Input files: weakly_all_des_gt_mergetweets_yoga_13k_em2_des_net.csv, mention_yoga.pickle,  Output files: data_yoga_des_net_em2.pickle, yoga_graph_des_@mention_em2.adjlist, yoga_graph_des_@mention_em2.mapping) :
+
+
+
+For third iteration, run following code
+
+```
+
+EM_yoga_graph_des_@mention_embd.ipynb
+
+```
+
+With Input files: data_yoga_des_net_em2.pickle, processed_yoga_data_des_net.pickle, user_des_net_yoga_em2.embeddings, weakly_all_des_gt_mergetweets_yoga_13k_em2_des_net.csv, Output files: b_model_des_net_yoga_em2.m, predicted_utypes_des_net_yoga_em2.pickle, user_des_net_yoga_em2.embeddings, weakly_all_des_gt_mergetweets_yoga_13k_em3_des_net.csv
+
+
 
 
 4. Supervised Baseline for yoga: 
