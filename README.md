@@ -71,9 +71,12 @@ transformers
 
 ### For Yoga:
 
-1. Create graph embedding (input file: weakly_all_des_gt_mergetweets_yoga_13k.csv) which will create data_des.pickle file:
+1. Create graph embedding (input file: weakly_all_des_gt_mergetweets_yoga_13k.csv) which will create data_yoga_des_net.pickle file:
 
-create_graph_des_weak_yoga_13k.ipynb 
+```
+create_graph_des_@mention_weak_yoga_13k.ipynb 
+
+```
 
 
 
