@@ -148,28 +148,47 @@ EM_yoga_graph_des_@mention_embd.ipynb
 With Input files: data_yoga_des_net_em2.pickle, processed_yoga_data_des_net.pickle, user_des_net_yoga_em2.embeddings, weakly_all_des_gt_mergetweets_yoga_13k_em2_des_net.csv, Output files: b_model_des_net_yoga_em2.m, predicted_utypes_des_net_yoga_em2.pickle, user_des_net_yoga_em2.embeddings, weakly_all_des_gt_mergetweets_yoga_13k_em3_des_net.csv
 
 
-
-
 4. Supervised Baseline for yoga: 
 
-   4.1) For LSTM_Glove, run baseline_glove_lstm_yoga_13k_weak.ipynb
+   4.1) For LSTM_Glove, run 
+	
+	```
+	baseline_glove_lstm_yoga_13k_weak.ipynb
 
-   4.2) For fine-tuned BERT, run baseline_BERT_finetuned_tweet_yoga_13k_weak.ipynb
 
-   For 3-fold cross-validation, randomly split input files are:
+	```
+
+   4.2) For fine-tuned BERT, run 
+
+
+	```
+	baseline_BERT_finetuned_tweet_yoga_13k_weak.ipynb
+
+	
+	```
+
+   For 3-fold cross-validation, randomly splitted input files are:
    For training: baseline_train_yoga_weak_cv1.csv, baseline_train_yoga_weak_cv2.csv, baseline_train_yoga_weak_cv3.csv
    For validation: baseline_val_yoga_weak_cv1.csv, baseline_val_yoga_weak_cv2.csv, baseline_val_yoga_weak_cv3.csv
    For testing: baseline_test_yoga_weak_cv1.csv, baseline_test_yoga_weak_cv2.csv, baseline_test_yoga_weak_cv3.csv
 	
 
-5. Visualize embeddings after label propagation: (input files: user_des_yoga.embeddings and predicted_yoga_13k.csv )
+5. Visualize embeddings after label propagation: (input files: user_des_net_yoga.embeddings and predicted_yoga_13k.csv )
 	
+	
+	```
 	visualize_graph_learning_embeddings_yoga.ipynb
 	
 
-6. Visualize embeddings after EM: (input files: user_des_yoga_em2.embeddings and predicted_yoga_13k.csv )
+	```
+6. Visualize embeddings after EM: (input files: user_des_net_yoga_em2.embeddings and predicted_yoga_13k_lp.csv )
 	
+	
+	```
 	visualize_embeddings_EM2_yoga.ipynb
+	
+	```
+
 
 ### For Keto:
 
