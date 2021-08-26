@@ -213,9 +213,19 @@ EM_keto_graph_des_embd.ipynb
 
 4. Supervised Baseline for keto:
 
-   4.1) For LSTM_Glove, run baseline_glove_lstm_keto_14k_weak.ipynb
+   4.1) For LSTM_Glove, run 
 
-   4.2) For fine-tuned BERT, run baseline_BERT_finetuned_tweet_keto_14k_weak.ipynb
+	```
+	baseline_glove_lstm_keto_14k_weak.ipynb
+
+	```
+
+   4.2) For fine-tuned BERT, run 
+
+	```
+	baseline_BERT_finetuned_tweet_keto_14k_weak.ipynb
+
+	```
 
    For 3-fold cross-validation, randomly split input files are:
    For training: baseline_train_keto_weak_cv1.csv, baseline_train_keto_weak_cv2.csv, baseline_train_keto_weak_cv3.csv
@@ -224,13 +234,25 @@ EM_keto_graph_des_embd.ipynb
 
 
 
-5. Visualize embeddings after label propagation: (input files: user_des_keto.embeddings and predicted_keto_14k.csv )
+5. Visualize embeddings after label propagation: (input files: user_des_net_keto.embeddings and predicted_keto_14k_lp.csv )
+	
+	
+	```
 	
 	visualize_graph_learning_embeddings_keto.ipynb
+
+
+	```
 	
 
-6. Visualize embeddings after EM: (input files: user_des_keto_em4.embeddings and predicted_keto_14k.csv )
+6. Visualize embeddings after EM: (input files: user_des_net_keto_em3.embeddings and predicted_keto_14k.csv )
+
+
+	```
 	
-	visualize_embeddings_EM4_keto.ipynb
+	visualize_embeddings_EM3_keto.ipynb
+
+
+	```
 
 
