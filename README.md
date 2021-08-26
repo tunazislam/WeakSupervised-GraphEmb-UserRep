@@ -173,7 +173,7 @@ With Input files: data_yoga_des_net_em2.pickle, processed_yoga_data_des_net.pick
    For testing: baseline_test_yoga_weak_cv1.csv, baseline_test_yoga_weak_cv2.csv, baseline_test_yoga_weak_cv3.csv
 	
 
-5. Visualize embeddings after label propagation: (input files: user_des_net_yoga.embeddings and predicted_yoga_13k.csv )
+5. Visualize embeddings after label propagation: (input files: user_des_net_yoga.embeddings and predicted_yoga_13k_lp.csv )
 	
 	
 	```
@@ -181,13 +181,14 @@ With Input files: data_yoga_des_net_em2.pickle, processed_yoga_data_des_net.pick
 	
 
 	```
-6. Visualize embeddings after EM: (input files: user_des_net_yoga_em2.embeddings and predicted_yoga_13k_lp.csv )
+6. Visualize embeddings after EM: (input files: user_des_net_yoga_em2.embeddings and predicted_yoga_13k.csv )
 	
 	
 	```
 	visualize_embeddings_EM2_yoga.ipynb
 	
 	```
+
 
 
 ### For Keto:
