@@ -8,7 +8,6 @@ This repository contains code for [[Twitter User Representation using Weakly Sup
 
 [[Data]](https://purdue0-my.sharepoint.com/:f:/g/personal/islam32_purdue_edu/EnXigq9B9GxClDbCJR75DiQB-KrsmQRmplpSvKpU6QJNPQ?e=5vxwHu)
 
-The dataset is parsed in an usable format for the codes in data.pickle. Files can be found at the following anonymous link:
 
 2. 'data' folder should be kept inside the 'WeakSupervised-GraphEmb-UserRep/code' folder. 
 
