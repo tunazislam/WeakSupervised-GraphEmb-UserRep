@@ -71,7 +71,7 @@ transformers
 
 ### For Yoga:
 
-1. Create graph embedding (Input files: weakly_all_des_gt_mergetweets_yoga_13k.csv, mention_yoga.pickle,  Output files: data_yoga_des_net.pickle, processed_yoga_data_des_net.pickle, yoga_graph_des_@mention.adjlist, yoga_graph_des_@mention.mapping) :
+1. Create graph embedding (Input files: weakly_all_des_gt_mergetweets_yoga_13k.csv, mention_yoga.pickle,  Output files: data_yoga_des_net.pickle, processed_yoga_data_des_net.pickle, yoga_graph_des_net.adjlist, yoga_graph_des_net.mapping) :
 
 ```
 create_graph_des_@mention_weak_yoga_13k.ipynb 
@@ -110,7 +110,7 @@ EM_create_graph_des_@mention_weak_yoga_13k.ipynb
 
 ```
 
-With Input files: weakly_all_des_gt_mergetweets_yoga_13k_em1_des_net.csv, mention_yoga.pickle,  Output files: data_yoga_des_net_em1.pickle, yoga_graph_des_@mention_em1.adjlist, yoga_graph_des_@mention_em1.mapping
+With Input files: weakly_all_des_gt_mergetweets_yoga_13k_em1_des_net.csv, mention_yoga.pickle,  Output files: data_yoga_des_net_em1.pickle, yoga_graph_des_net_em1.adjlist, yoga_graph_des_net_em1.mapping
 
 
 
@@ -133,7 +133,7 @@ EM_create_graph_des_@mention_weak_yoga_13k.ipynb
 
 ```
 
-With Input files: weakly_all_des_gt_mergetweets_yoga_13k_em2_des_net.csv, mention_yoga.pickle,  Output files: data_yoga_des_net_em2.pickle, yoga_graph_des_@mention_em2.adjlist, yoga_graph_des_@mention_em2.mapping
+With Input files: weakly_all_des_gt_mergetweets_yoga_13k_em2_des_net.csv, mention_yoga.pickle,  Output files: data_yoga_des_net_em2.pickle, yoga_graph_des_net_em2.adjlist, yoga_graph_des_net_em2.mapping
 
 
 
