@@ -110,7 +110,7 @@ EM_create_graph_des_@mention_weak_yoga_13k.ipynb
 
 ```
 
-With Input files: weakly_all_des_gt_mergetweets_yoga_13k_em1_des_net.csv, mention_yoga.pickle,  Output files: data_yoga_des_net_em1.pickle, yoga_graph_des_@mention_em1.adjlist, yoga_graph_des_@mention_em1.mapping) :
+With Input files: weakly_all_des_gt_mergetweets_yoga_13k_em1_des_net.csv, mention_yoga.pickle,  Output files: data_yoga_des_net_em1.pickle, yoga_graph_des_@mention_em1.adjlist, yoga_graph_des_@mention_em1.mapping
 
 
 
@@ -133,7 +133,7 @@ EM_create_graph_des_@mention_weak_yoga_13k.ipynb
 
 ```
 
-With Input files: weakly_all_des_gt_mergetweets_yoga_13k_em2_des_net.csv, mention_yoga.pickle,  Output files: data_yoga_des_net_em2.pickle, yoga_graph_des_@mention_em2.adjlist, yoga_graph_des_@mention_em2.mapping) :
+With Input files: weakly_all_des_gt_mergetweets_yoga_13k_em2_des_net.csv, mention_yoga.pickle,  Output files: data_yoga_des_net_em2.pickle, yoga_graph_des_@mention_em2.adjlist, yoga_graph_des_@mention_em2.mapping
 
 
 
@@ -193,22 +193,106 @@ With Input files: data_yoga_des_net_em2.pickle, processed_yoga_data_des_net.pick
 
 ### For Keto:
 
-1. Create graph embedding (input file: weakly_all_des_mergetweets_keto_gt_14k) which will create data_keto_des.pickle file:
 
-create_graph_des_weak_keto_14k.ipynb
+1. Create graph embedding (Input files: weakly_all_des_mergetweets_keto_gt_14k.csv, mention_keto.pickle,  Output files: data_keto_des_net.pickle, processed_keto_data_des_net.pickle, keto_graph_des_net.adjlist, keto_graph_des_net.mapping) :
+
+```
+create_graph_des_@mention_weak_keto_14k.ipynb 
+
+```
+
+2. For Embedding learning (Input files: data_keto_des_net.pickle, Output files: b_model_des_net_keto.m, predicted_utypes_des_net_keto.pickle, user_des_net_keto.embeddings): 
+
+
+```
+
+keto_graph_des_@mention_embd.ipynb
+
+
+```
+
+3. For M step, run iteratively following codes: 
+
+
+For first iteration, run following code
+
+```
+
+EM_keto_graph_des_@mention_embd.ipynb
+
+```
+
+With Input files: processed_keto_data_des_net.pickle, user_des_net_keto.embeddings, weakly_all_des_mergetweets_keto_gt_14k.csv, Output files: weakly_all_des_mergetweets_keto_gt_14k_em1_des_net.csv
+
+
+Then run following code:
+
+```
+
+EM_create_graph_des_@mention_weak_keto_14k.ipynb
+
+```
+
+With Input files: weakly_all_des_mergetweets_keto_gt_14k_em1_des_net.csv, mention_keto.pickle,  Output files: data_keto_des_net_em1.pickle, keto_graph_des_net_em1.adjlist, keto_graph_des_net_em1.mapping
 
 
 
-2.  For Embedding learning:
+For second iteration, run following code
 
-keto_graph_des_embd.ipynb
+```
+
+EM_keto_graph_des_@mention_embd.ipynb
+
+```
+
+With Input files: data_keto_des_net_em1.pickle, processed_keto_data_des_net.pickle, user_des_net_keto_em1.embeddings, weakly_all_des_mergetweets_keto_gt_14k_em1_des_net.csv, Output files: b_model_des_net_keto_em1.m, predicted_utypes_des_net_keto_em1.pickle, user_des_net_keto_em1.embeddings, weakly_all_des_mergetweets_keto_gt_14k_em2_des_net.csv
 
 
-3. For M step:
+Then run following code:
 
-EM_create_graph_des_weak_keto_14k.ipynb
+```
 
-EM_keto_graph_des_embd.ipynb
+EM_create_graph_des_@mention_weak_keto_14k.ipynb
+
+```
+
+With Input files: weakly_all_des_mergetweets_keto_gt_14k_em2_des_net.csv, mention_yoga.pickle,  Output files: data_keto_des_net_em2.pickle, keto_graph_des_net_em2.adjlist, keto_graph_des_net_em2.mapping
+
+
+
+For third iteration, run following code
+
+```
+
+EM_keto_graph_des_@mention_embd.ipynb
+
+```
+
+With Input files: data_keto_des_net_em2.pickle, processed_keto_data_des_net.pickle, user_des_net_keto_em2.embeddings, weakly_all_des_mergetweets_keto_gt_14k_em2_des_net.csv, Output files: b_model_des_net_keto_em2.m, predicted_utypes_des_net_keto_em2.pickle, user_des_net_keto_em2.embeddings, weakly_all_des_mergetweets_keto_gt_14k_em3_des_net.csv
+
+
+Then run following code:
+
+```
+
+EM_create_graph_des_@mention_weak_keto_14k.ipynb
+
+```
+
+With Input files: weakly_all_des_mergetweets_keto_gt_14k_em3_des_net.csv, mention_yoga.pickle,  Output files: data_keto_des_net_em3.pickle, keto_graph_des_net_em3.adjlist, keto_graph_des_net_em3.mapping
+
+
+For fourth iteration, run following code
+
+```
+
+EM_keto_graph_des_@mention_embd.ipynb
+
+```
+
+With Input files: data_keto_des_net_em3.pickle, processed_keto_data_des_net.pickle, user_des_net_keto_em3.embeddings, weakly_all_des_mergetweets_keto_gt_14k_em3_des_net.csv, Output files: b_model_des_net_keto_em3.m, predicted_utypes_des_net_keto_em3.pickle, user_des_net_keto_em3.embeddings, weakly_all_des_mergetweets_keto_gt_14k_em4_des_net.csv
+
+
 
 
 4. Supervised Baseline for keto:
