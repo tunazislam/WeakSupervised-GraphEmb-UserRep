@@ -6,7 +6,7 @@ This repository contains code for [[Twitter User Representation using Weakly Sup
 
 1. Please download the 'data' folder from following link (on request):
 
-https://drive.google.com/drive/folders/15wLzfzQVIgW-giQn-TvHLDqb2TQCOEny?usp=sharing
+[[Data]](https://purdue0-my.sharepoint.com/:f:/g/personal/islam32_purdue_edu/EnXigq9B9GxClDbCJR75DiQB-KrsmQRmplpSvKpU6QJNPQ?e=5vxwHu)
 
 The dataset is parsed in an usable format for the codes in data.pickle. Files can be found at the following anonymous link:
 
