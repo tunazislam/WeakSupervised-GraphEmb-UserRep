@@ -339,3 +339,16 @@ With Input files: data_keto_des_net_em3.pickle, processed_keto_data_des_net.pick
 	```
 
 
+## Citation:
+
+If you find the paper useful in your work, please cite:
+
+```
+@article{islam2021twitter,
+  title={Twitter User Representation using Weakly Supervised Graph Embedding},
+  author={Islam, Tunazzina and Goldwasser, Dan},
+  journal={arXiv preprint arXiv:2108.08988},
+  year={2021}
+}
+
+```
