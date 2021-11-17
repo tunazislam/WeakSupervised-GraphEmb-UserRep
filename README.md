@@ -1,6 +1,6 @@
 # WeakSupervised-GraphEmb-UserRep
 
-This repository contains code for [[Twitter User Representation using Weakly Supervised Graph Embedding]](https://arxiv.org/pdf/2108.08988.pdf), ICWSM 2022.
+This repository contains code for [ [Twitter User Representation using Weakly Supervised Graph Embedding](https://arxiv.org/pdf/2108.08988.pdf) ], [ICWSM 2022](https://www.icwsm.org/2022/index.html/).
 
 ## Data:
 
